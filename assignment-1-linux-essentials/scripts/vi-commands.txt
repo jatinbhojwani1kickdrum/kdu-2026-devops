@@ -1,0 +1,7 @@
+Start of file: gg
+End of file: G
+Start of line: 0
+End of line: $
+Append at end of line: A
+Delete a line: dd
+Duplicate a line: yyp
