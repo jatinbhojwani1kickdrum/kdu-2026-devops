@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Serverless Message Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header-box">
+      <h1>Serverless Message Board</h1>
+    </div>
+
+    <div class="form-box">
+      <h2>Leave a Message</h2>
+      <textarea id="messageInput" placeholder="Type your message here..."></textarea>
+      <button id="submitBtn">Submit</button>
+    </div>
+
+    <div class="messages-box">
+      <h2>Messages</h2>
+      <ul id="messageList"></ul>
+      <button onclick="loadMessages()" class="refresh-btn">Refresh</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

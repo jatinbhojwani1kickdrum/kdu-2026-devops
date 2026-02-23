@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  width: 600px;
+}
+
+.header-box {
+  background-color: #dbe8f5;
+  border: 2px solid #3b6fb6;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header-box h1 {
+  margin: 0;
+  color: #2f5d9f;
+}
+
+.form-box {
+  background-color: #e4f4ea;
+  border: 2px solid #3a9d5c;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-box h2 {
+  margin-top: 0;
+  color: #2d7c4a;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #7cc99d;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#submitBtn {
+  background-color: #3a9d5c;
+  color: white;
+}
+
+#submitBtn:hover {
+  background-color: #2e7d46;
+}
+
+.messages-box {
+  background-color: #e6e9f8;
+  border: 2px solid #5a63c8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.messages-box h2 {
+  margin-top: 0;
+  color: #3e45a3;
+}
+
+#messageList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#messageList li {
+  background-color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #c5c9f0;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.refresh-btn {
+  background-color: #5a63c8;
+  color: white;
+}
+
+.refresh-btn:hover {
+  background-color: #444db0;
+}
