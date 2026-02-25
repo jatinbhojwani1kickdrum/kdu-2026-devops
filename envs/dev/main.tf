@@ -42,11 +42,11 @@ module "compute" {
 
   db_endpoint = module.database.db_endpoint
   db_username = "admin"
-  db_password = "ChangeMe123!"
+  db_password = var.db_password
 
-  frontend_repo = "https://github.com/Sathwikkd1/kdu-frontend-app.git"
-  backend1_repo = "https://github.com/Sathwikkd1/kdu-backend-app-1.git"
-  backend2_repo = "https://github.com/Sathwikkd1/kdu-backend-app-2.git"
+  frontend_repo = var.frontend_repo
+  backend1_repo = var.backend1_repo
+  backend2_repo = var.backend2_repo
 }
 
 

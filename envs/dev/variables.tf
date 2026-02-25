@@ -42,3 +42,15 @@ variable "db_password" {
   type      = string
   sensitive = true
 }
+
+variable "frontend_repo" {
+  type = string
+}
+
+variable "backend1_repo" {
+  type = string
+}
+
+variable "backend2_repo" {
+  type = string
+}
