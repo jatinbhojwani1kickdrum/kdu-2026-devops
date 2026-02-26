@@ -1,0 +1,52 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: currencydb
+    ports:
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend-2:
+    image: kdu-backend-2:local
+    container_name: backend-2
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/currencydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - "8081:8081"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  backend-1:
+    image: kdu-backend-1:local
+    container_name: backend-1
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/currencydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      FEIGN_NAME: second-service-eks-and-rds
+      FEIGN_URL: http://backend-2:8081
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      backend-2:
+        condition: service_started
+
+  frontend:
+    image: kdu-frontend:local
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-1

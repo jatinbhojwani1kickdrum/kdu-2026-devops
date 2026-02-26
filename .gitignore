@@ -1,0 +1,50 @@
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Node (Frontend)
+# ======================
+frontend/node_modules
+frontend/build
+frontend/.env
+frontend/.env.local
+
+# ======================
+# Java / Spring Boot
+# ======================
+backend-1/build/
+backend-2/build/
+backend-1/.gradle/
+backend-2/.gradle/
+
+# Gradle wrapper logs
+*.log
+
+# ======================
+# Docker
+# ======================
+*.tar
+
+# ======================
+# IDE files
+# ======================
+.idea/
+.vscode/
+*.iml
+
+# ======================
+# Misc
+# ======================
+.env
+# Java compiled output
+backend-1/bin/
+backend-2/bin/
+*.class
+
+
+# Gradle build output
+**/build/
+**/.gradle/
