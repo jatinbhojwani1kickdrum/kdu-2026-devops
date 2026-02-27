@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+    commands:
+      - chmod +x mvnw
+      - ./mvnw -v
+  build:
+    commands:
+      - echo Build started on `date`
+      - ./mvnw clean package
+      - ls -lah target
+      - cp target/*.war target/ROOT.war
+
+artifacts:
+  files:
+    - target/ROOT.war
+  discard-paths: yes
