@@ -5,13 +5,12 @@ phases:
     runtime-versions:
       java: corretto21
     commands:
-      - echo Installing dependencies...
-
+      - chmod +x mvnw
+      - ./mvnw -v
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean package
-      - echo Build completed on `date`
+      - ./mvnw clean package
 
 artifacts:
   files:
