@@ -11,8 +11,10 @@ phases:
     commands:
       - echo Build started on `date`
       - ./mvnw clean package
+      - ls -lah target
+      - cp target/*.war target/ROOT.war
 
 artifacts:
   files:
-    - target/*.war
+    - target/ROOT.war
   discard-paths: yes
