@@ -12,6 +12,6 @@ public class Versioncontroller {
 
     @GetMapping("/version")
     public String version() {
-        return "Hello from Spring Boot! Version: " + appVersion;
+        return "Hello from Spring Boot! VersionNew1: " + appVersion;
     }
 }
